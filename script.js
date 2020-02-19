@@ -46,7 +46,10 @@ class Calculator {
                 computation = prev * current
                 break
             case '÷':
-                computation = prev / current
+                if (prev === 0) {
+                    computation = 'ERROR'
+                } else
+                    computation = prev / current
                 break
             default:
                 return
